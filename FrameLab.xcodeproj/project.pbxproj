@@ -1,0 +1,33 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+000000000000000000000001 = { isa = PBXProject; attributes = { LastUpgradeCheck = 2620; }; buildConfigurationList = 000000000000000000000016; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; knownRegions = (en, Base); mainGroup = 000000000000000000000002; productRefGroup = 000000000000000000000003; projectDirPath = ""; projectRoot = ""; targets = (000000000000000000000006, 000000000000000000000007); };
+000000000000000000000002 = { isa = PBXGroup; children = (000000000000000000000004, 000000000000000000000005, 000000000000000000000003); sourceTree = "<group>"; };
+000000000000000000000004 = { isa = PBXGroup; children = (000000000000000000000008); path = Sources; sourceTree = "<group>"; };
+000000000000000000000005 = { isa = PBXGroup; children = (000000000000000000000009); path = Tests; sourceTree = "<group>"; };
+000000000000000000000003 = { isa = PBXGroup; children = (00000000000000000000000A, 00000000000000000000000B); name = Products; sourceTree = "<group>"; };
+000000000000000000000008 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameRenderer.swift; sourceTree = "<group>"; };
+000000000000000000000009 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameRendererTests.swift; sourceTree = "<group>"; };
+00000000000000000000000A = { isa = PBXFileReference; explicitFileType = wrapper.framework; path = FrameLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+00000000000000000000000B = { isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FrameLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+00000000000000000000000C = { isa = PBXBuildFile; fileRef = 000000000000000000000008; };
+00000000000000000000000D = { isa = PBXBuildFile; fileRef = 000000000000000000000009; };
+000000000000000000000013 = { isa = PBXBuildFile; fileRef = 00000000000000000000000A; };
+00000000000000000000000E = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (00000000000000000000000C); runOnlyForDeploymentPostprocessing = 0; };
+00000000000000000000000F = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (00000000000000000000000D); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000010 = { isa = PBXHeadersBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000011 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000012 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000013); runOnlyForDeploymentPostprocessing = 0; };
+000000000000000000000006 = { isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000017; buildPhases = (000000000000000000000010, 00000000000000000000000E, 000000000000000000000011); buildRules = (); dependencies = (); name = FrameLab; productName = FrameLab; productReference = 00000000000000000000000A; productType = "com.apple.product-type.framework"; };
+000000000000000000000007 = { isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000018; buildPhases = (00000000000000000000000F, 000000000000000000000012); buildRules = (); dependencies = (000000000000000000000014); name = FrameLabTests; productName = FrameLabTests; productReference = 00000000000000000000000B; productType = "com.apple.product-type.bundle.unit-test"; };
+000000000000000000000014 = { isa = PBXTargetDependency; target = 000000000000000000000006; targetProxy = 000000000000000000000015; };
+000000000000000000000015 = { isa = PBXContainerItemProxy; containerPortal = 000000000000000000000001; proxyType = 1; remoteGlobalIDString = 000000000000000000000006; remoteInfo = FrameLab; };
+000000000000000000000016 = { isa = XCConfigurationList; buildConfigurations = (000000000000000000000019, 00000000000000000000001A); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000017 = { isa = XCConfigurationList; buildConfigurations = (00000000000000000000001B, 00000000000000000000001C); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000018 = { isa = XCConfigurationList; buildConfigurations = (00000000000000000000001D, 00000000000000000000001E); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+000000000000000000000019 = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1 $(inherited)";  }; name = Debug; };
+00000000000000000000001A = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_COMPILATION_MODE = wholemodule;  }; name = Release; };
+00000000000000000000001B = { isa = XCBuildConfiguration; buildSettings = { GENERATE_INFOPLIST_FILE = YES; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = "1,2"; PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = dev.framelab.renderer; DEFINES_MODULE = YES; SKIP_INSTALL = YES;  }; name = Debug; };
+00000000000000000000001C = { isa = XCBuildConfiguration; buildSettings = { GENERATE_INFOPLIST_FILE = YES; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = "1,2"; PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = dev.framelab.renderer; DEFINES_MODULE = YES; SKIP_INSTALL = YES;  }; name = Release; };
+00000000000000000000001D = { isa = XCBuildConfiguration; buildSettings = { GENERATE_INFOPLIST_FILE = YES; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = "1,2"; PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = dev.framelab.tests; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";  }; name = Debug; };
+00000000000000000000001E = { isa = XCBuildConfiguration; buildSettings = { GENERATE_INFOPLIST_FILE = YES; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = "1,2"; PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = dev.framelab.tests; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";  }; name = Release; };
+}; rootObject = 000000000000000000000001; }
